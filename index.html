@@ -11,13 +11,15 @@
         <div class="container">
             <nav>
                 <img src="images/logo.png" class="logo">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <ion-icon name="close" onclick="closemenu()" class="fas"></ion-icon>
                 </ul>
+                <ion-icon name="menu" class="fas" onclick="openmenu()"></ion-icon>
             </nav>
             
             <div class="header-text">
@@ -75,7 +77,104 @@
         </div>
     </div>
 
+    <!--servivies-->
 
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <ion-icon name="logo-web-component"></ion-icon>
+                    <h2>Web Design</h2>
+                    <p>I am an experienced web developer with expertise in React.js and Node.js. With a strong foundation in these cutting-edge technologies, I have successfully contributed to the creation of dynamic and responsive web applications. My proficiency in React.js allows me to craft interactive user interfaces that engage users, enhance user experience, and ensure seamless navigation. Additionally, my proficiency in Node.js enables me to build robust server-side applications, manage databases, and create efficient API endpoints.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <ion-icon name="crop"></ion-icon>
+                    <h2>UI / UX Design</h2>
+                    <p>I am a skilled UI/UX designer dedicated to creating exceptional user experiences that blend aesthetics with functionality. With a strong background in user interface design, I have a keen eye for visual detail, typography, and layout, ensuring that every design I create is visually appealing and user-friendly. My expertise extends to user experience design, where I focus on understanding user behavior, conducting research, and crafting intuitive interactions that enhance product usability.</p>
+                    <a href="#">Learn More</a>
+                </div>
+
+                <div>
+                    <ion-icon name="code-slash"></ion-icon>
+                    <h2>Programing Languages</h2>
+                    <p>Programming languages serve as the fundamental building blocks for software development, each with its unique syntax, capabilities, and applications. As a programmer, I possess a diverse skill set encompassing several programming languages, enabling me to tackle a wide range of software development challenges. I have Many projects using this Programing Languages.</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--portfolio-->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.png" alt="">
+                    <div class="layer"> <h3>Social Media WebApplication</h3>
+                        <p>The Webapplication connects you to the Talented people around the world.</p></div>
+                </div>
+                <div class="work">
+                    
+                    <img src="images/work-2.png" alt="">
+                    <div class="layer">
+                        <h3>Music Player</h3>
+                    <p>The app which helps you to Listion your Favourite songs or Music Anywhere Anytime.</p>
+                    </div>
+                    
+                </div>
+                <div class="work">
+                    <img src="images/work-3.png" alt="">
+                    <div class="layer">
+                        <h3>Online Shopping WebApp</h3>
+                    <p>The app which helps you to Buy your Favourite Things Anytime Anywhere.</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--contact-->
+
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><ion-icon name="mail"></ion-icon>vasaniutsav2@gmail.com</p>
+                    <p><ion-icon name="call"></ion-icon>+1(201)-554-5144</p>
+                    <div class="social-icon">
+                        <a href="https://www.instagram.com/the_vasani_7141/"><ion-icon name="logo-instagram"></ion-icon></a>
+                        <a href="https://www.linkedin.com/in/utsavvasani/"><ion-icon name="logo-linkedin"></ion-icon></a>
+                    </div>
+                    <a href="images/Utsavkumar vasani Resume.pdf" download class="btn btn2">Download Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright &#169; Utsav Vasani. Made By Utsav Vasani</p>
+        </div>
+    </div>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script>
         var tablinks=document.getElementsByClassName("tab-links");
         var tabcontents=document.getElementsByClassName("tab-contents");
@@ -94,6 +193,18 @@
 
         }
 
+    </script>
+
+    <script>
+        var sidemenu=document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right="0";
+        }
+
+        function closemenu(){
+            sidemenu.style.right="-200px";
+        }
     </script>
 </body>
 </html>
