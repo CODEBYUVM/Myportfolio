@@ -16,7 +16,7 @@ body{
 #header{
     height: 100vh;
     width: 100%;
-    background-image: url("C:/Users/Asus/OneDrive/Desktop/myportfolio/images/background.png");
+   /* background-image: url("C:/Users/Asus/OneDrive/Desktop/myportfolio/images/background.png");*/
     background-size: cover;
     background-position: center;
 }
@@ -34,6 +34,10 @@ nav{
 
 .logo{
     width:140px;
+}
+
+.nlogo{
+    color: #ff004f;
 }
 
 nav ul li{
@@ -374,7 +378,7 @@ nav .fas{
 @media screen and (max-width: 480px){
 
     #header{
-        background-image: url(images/phone-background.png);
+      /*  background-image: url(images/phone-background.png); */
     }
 
     .header-text{
