@@ -36,10 +36,64 @@
                     <img src="images/user.png">
                 </div>
                 <div class="about-col-2">
-                    <h1>About Me</h1>
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Solution-focused Web Developer with experience in web-based applications.Participated in development
+                        and implementation of web-based solutions. Supported company business objectives and strategies while
+                        gaining real-world experience. Mentored Senior Java Web Developers, learning multiple systems and
+                        efficient development techniques.</p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Web Development</span><br>Web App Development</li>
+                                <li><span>UI/UX</span><br>Designing Web / App interfaces</li>
+                                <li><span>Programing Languages</span><br>Java, Python, Javascript, C, C++, C#, PHP</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents"  id="experience">
+                            <ul>
+                                <li><span>11/2022 - 04/2023</span><br>
+                                <li class="bullet">Full-Stack Developer intern at Code winglet private limited.</li><br><li class="bullet"> User interfaces with modern JavaScript frameworks such as React.is and
+                                    Node.js, HTML5, and CSS3.</li><br><li class="bullet">Worked closely with developers on creating new code.</li><br><li class="bullet">User-friendly web forms with validation and error handling.</li><br>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                        <div class="tab-contents"  id="education">
+                            <ul>
+                                <li><span>09/2020 - 05/2023</span><br>Bachlor of Sciences in Information and Teachnology From Uka Tarsadia University, Bardoli, Gujarat.</li>
+                                <li><span>09/2023-Current</span><br>Master of Sciences in Computer Sciences From New jersey Institute of Teachnology, Newark, New Jersey.</li>
+                            </ul>
+                        </div>
+
                 </div>
             </div>
         </div>
     </div>
+
+
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks)
+            {
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents)
+            {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+
+        }
+
+    </script>
 </body>
 </html>
