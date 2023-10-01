@@ -110,12 +110,13 @@ flex-wrap: wrap;
 }
 
 .tab-links{
-    margin-top: 1rem;
+  
     margin-right: 50px;
     font-size: 18px;
     font-weight: 700;
     cursor: pointer;
     text-decoration: underline;
+    padding-bottom: 12px;
     color: #ff004f;
  
   
