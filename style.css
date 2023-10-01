@@ -116,17 +116,16 @@ flex-wrap: wrap;
     font-weight: 700;
     cursor: pointer;
 
-    padding-bottom: 12px;
-    color: #ff004f;
  
   
 }
 
 .line {
              
-    padding-bottom: 15px;
-    border-bottom-style: solid red;
+    padding-bottom: 2px;
+    border-bottom-style: solid;
     border-bottom-width: 3.1px;
+    border-bottom-color: #ff004f;
     width: fit-content;
 }
   
@@ -371,6 +370,6 @@ nav .fas{
     font-size: 18px;
     font-weight: 700;
     cursor: pointer;
-    text-decoration: underline;
-    color: #ff004f;
+    
+   
 }
