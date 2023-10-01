@@ -115,12 +115,21 @@ flex-wrap: wrap;
     font-size: 18px;
     font-weight: 700;
     cursor: pointer;
-    text-decoration: underline;
+
     padding-bottom: 12px;
     color: #ff004f;
  
   
 }
+
+.line {
+             
+    padding-bottom: 15px;
+    border-bottom-style: solid red;
+    border-bottom-width: 3.1px;
+    width: fit-content;
+}
+  
 
 
 .tab-contents ul li{
