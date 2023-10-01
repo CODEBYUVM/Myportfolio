@@ -271,9 +271,11 @@ margin-top: 50px;
 
 .contact-left p{
     margin-top: 30px;
+    align-items: center;
+    display: flex;
+}
    
 
-}
 
 .contact-left p ion-icon{
     color: #ff004f;
@@ -372,4 +374,9 @@ nav .fas{
     cursor: pointer;
     
    
+}
+
+.gmate{
+    display: grid;
+    grid-template-columns: repeat(2,10% 10%);
 }
