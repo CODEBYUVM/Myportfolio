@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/code-slash-outline.svg">
-    <title>My Resume</title>
+    <title>Utsavkumar vasani Personal Portfolio</title>
 </head>
 <body>
     <div id="header">
@@ -18,9 +17,9 @@
                     <li><a href="#services">Services</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    
+                    <ion-icon name="close" onclick="closemenu()" class="fas"></ion-icon>
                 </ul>
-              
+                <ion-icon name="menu" class="fas" onclick="openmenu()"></ion-icon>
             </nav>
             
             <div class="header-text">
@@ -46,35 +45,32 @@
                         efficient development techniques.</p>
 
                         <div class="tab-titles">
-                            <p class="tab-links active-link" >Skills</p>
-                            <div class="tab-contents active-tab" id="skills">
-                                <ul>
-                                    <li><span>Web Development</span><br>Web App Development</li>
-                                    <li><span>UI/UX</span><br>Designing Web / App interfaces</li>
-                                    <li><span>Programing Languages</span><br>Java, Python, Javascript, C, C++, C#, PHP</li>
-                                </ul>
-                            </div>
-                            <p class="tab-links" >Experience</p>
-                            <div class="tab-contents"  id="experience">
-                                <ul>
-                                    <li><span>11/2022 - 04/2023</span><br>
-                                    <li class="bullet">Full-Stack Developer intern at Code winglet private limited.</li><br><li class="bullet"> User interfaces with modern JavaScript frameworks such as React.is and
-                                        Node.js, HTML5, and CSS3.</li><br><li class="bullet">Worked closely with developers on creating new code.</li><br><li class="bullet">User-friendly web forms with validation and error handling.</li><br>
-                                    </li>
-                                    
-                                </ul>
-                            </div>
-                            <p class="tab-links" >Education</p>
-                            <div class="tab-contents"  id="education">
-                                <ul>
-                                    <li><span>09/2020 - 05/2023</span><br>Bachlor of Sciences in Information and Teachnology From Uka Tarsadia University, Bardoli, Gujarat.</li>
-                                    <li><span>09/2023-Current</span><br>Master of Sciences in Computer Sciences From New jersey Institute of Teachnology, Newark, New Jersey.</li>
-                                </ul>
-                            </div>
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
                         </div>
-                       
-                      
-                      
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Web Development</span><br>Web App Development</li>
+                                <li><span>UI/UX</span><br>Designing Web / App interfaces</li>
+                                <li><span>Programing Languages</span><br>Java, Python, Javascript, C, C++, C#, PHP</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents"  id="experience">
+                            <ul>
+                                <li><span>11/2022 - 04/2023</span><br>
+                                <li class="bullet">Full-Stack Developer intern at Code winglet private limited.</li><br><li class="bullet"> User interfaces with modern JavaScript frameworks such as React.is and
+                                    Node.js, HTML5, and CSS3.</li><br><li class="bullet">Worked closely with developers on creating new code.</li><br><li class="bullet">User-friendly web forms with validation and error handling.</li><br>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                        <div class="tab-contents"  id="education">
+                            <ul>
+                                <li><span>09/2020 - 05/2023</span><br>Bachlor of Sciences in Information and Teachnology From Uka Tarsadia University, Bardoli, Gujarat.</li>
+                                <li><span>09/2023-Current</span><br>Master of Sciences in Computer Sciences From New jersey Institute of Teachnology, Newark, New Jersey.</li>
+                            </ul>
+                        </div>
 
                 </div>
             </div>
@@ -91,20 +87,20 @@
                     <ion-icon name="logo-web-component"></ion-icon>
                     <h2>Web Design</h2>
                     <p>I am an experienced web developer with expertise in React.js and Node.js. With a strong foundation in these cutting-edge technologies, I have successfully contributed to the creation of dynamic and responsive web applications. My proficiency in React.js allows me to craft interactive user interfaces that engage users, enhance user experience, and ensure seamless navigation. Additionally, my proficiency in Node.js enables me to build robust server-side applications, manage databases, and create efficient API endpoints.</p>
-                 
+                    <a href="#">Learn More</a>
                 </div>
                 <div>
                     <ion-icon name="crop"></ion-icon>
                     <h2>UI / UX Design</h2>
                     <p>I am a skilled UI/UX designer dedicated to creating exceptional user experiences that blend aesthetics with functionality. With a strong background in user interface design, I have a keen eye for visual detail, typography, and layout, ensuring that every design I create is visually appealing and user-friendly. My expertise extends to user experience design, where I focus on understanding user behavior, conducting research, and crafting intuitive interactions that enhance product usability.</p>
-
+                    <a href="#">Learn More</a>
                 </div>
 
                 <div>
                     <ion-icon name="code-slash"></ion-icon>
                     <h2>Programing Languages</h2>
                     <p>Programming languages serve as the fundamental building blocks for software development, each with its unique syntax, capabilities, and applications. As a programmer, I possess a diverse skill set encompassing several programming languages, enabling me to tackle a wide range of software development challenges. I have Many projects using this Programing Languages.</p>
-                  
+                    <a href="#">Learn More</a>
                 </div>
             </div>
         </div>
@@ -179,6 +175,55 @@
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks)
+            {
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents)
+            {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+
+        }
+
+    </script>
+
+    <script>
+        var sidemenu=document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right="0";
+        }
+
+        function closemenu(){
+            sidemenu.style.right="-200px";
+        }
+    </script>
+    
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyem70T9v4dLbukm7xiJpV_P8tkuUmOMdTywap_a2RuTpjkdj2pBULn_Yp0VhEpxvZICQ/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg=document.getElementById("msg");
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML="Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML=""
+                },2000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
 </body>
 </html>
